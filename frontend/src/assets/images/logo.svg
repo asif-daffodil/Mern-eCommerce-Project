@@ -1,0 +1,18 @@
+<svg width="100%" viewBox="0 0 680 160" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Do or Die IT Company Logo</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Modern transparent logo for Do or Die IT company</desc>
+
+  <!-- Straight vertical double bar accent -->
+  <rect x="38" y="18" width="5" height="92" rx="2" fill="#e63946" style="fill:rgb(230, 57, 70);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="52" y="18" width="2.5" height="92" rx="2" fill="#e63946" opacity="0.4" style="fill:rgb(230, 57, 70);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Main name -->
+  <text x="76" y="90" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="62" font-weight="900" fill="#e63946" letter-spacing="2" style="fill:rgb(230, 57, 70);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Arial Black&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:62px;font-weight:900;text-anchor:start;dominant-baseline:auto">DO OR DIE</text>
+
+  <!-- Short underline accent only under "DO" -->
+  <rect x="76" y="98" width="115" height="2.5" fill="#e63946" style="fill:rgb(230, 57, 70);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Tagline -->
+  <text x="78" y="124" font-family="'Arial Narrow', 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="400" fill="#e63946" letter-spacing="8" opacity="0.7" style="fill:rgb(230, 57, 70);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Arial Narrow&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:12.5px;font-weight:400;text-anchor:start;dominant-baseline:auto">INFORMATION TECHNOLOGY</text>
+
+</svg>
