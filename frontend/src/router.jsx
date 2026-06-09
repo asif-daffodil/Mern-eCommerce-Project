@@ -7,6 +7,7 @@ import Faq from "./pages/frontPages/Faq";
 import Contact from "./pages/frontPages/Contact";
 import Login from "./pages/frontPages/auth/Login";
 import Register from "./pages/frontPages/auth/Register";
+import Checkout from "./pages/frontPages/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />
       }
     ],
   },
