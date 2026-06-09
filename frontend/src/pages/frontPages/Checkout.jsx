@@ -360,7 +360,7 @@ export default function Checkout() {
 
 
    return (
-      <main>
+      <main className="max-w-7xl mx-auto">
          <h1 className="sr-only">Checkout</h1>
          <div className="flex flex-col h-full md:flex-row">
             {/* Sidebar */}
