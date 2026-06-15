@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { IoIosCart } from 'react-icons/io';
 import { NavLink } from 'react-router';
-import logo from '../../assets/images/logo.svg'
 
 export default function Header() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +52,7 @@ export default function Header() {
                >
                   <span className="sr-only">Your Company</span>
                   <img
-                     src={logo}
+                     src='http://localhost:5000/public/images/logo.svg'
                      alt="readymadeui logo"
                      className="h-9 w-auto"
                   />
@@ -72,7 +71,7 @@ export default function Header() {
                      >
                         <span className="sr-only">Your Company</span>
                         <img
-                           src={logo}
+                           src='http://localhost:5000/public/images/logo.svg'
                            alt="readymadeui logo dialog"
                            className="h-9 w-auto"
                         />

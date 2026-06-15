@@ -19,16 +19,16 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Company</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> About </a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> About </a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Blog </a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Blog </a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Affiliate Program </a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Affiliate Program </a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Get Coupon </a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"> Get Coupon </a>
                                     </li>
                                 </ul>
                             </div>
@@ -36,19 +36,19 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Order &amp; Purchases</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Order Status</a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Order Status</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Track Your Order</a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Track Your Order</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Purchase History</a>
+                                        <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Purchase History</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Returns &amp; Refunds</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Returns &amp; Refunds</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Payment Methods</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Payment Methods</a>
                                     </li>
                                 </ul>
                             </div>
@@ -56,19 +56,19 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Support &amp; Services</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Support</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Support</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">FAQs</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">FAQs</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Service Centers</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Service Centers</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Warranty Information</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Warranty Information</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Product Manuals</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Product Manuals</a>
                                     </li>
                                 </ul>
                             </div>
@@ -76,19 +76,19 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Partnerships</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Partner With Us</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Partner With Us</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Become a Supplier</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Become a Supplier</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Affiliate Program</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Affiliate Program</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Collaboration Opportunities</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Collaboration Opportunities</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Sponsorship Requests</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Sponsorship Requests</a>
                                     </li>
                                 </ul>
                             </div>
@@ -96,19 +96,19 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Payment Options</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Credit &amp; Debit Cards</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Credit &amp; Debit Cards</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">PayPal</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">PayPal</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Bank Transfers</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Bank Transfers</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Installment Plans</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Installment Plans</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Gift Cards</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Gift Cards</a>
                                     </li>
                                 </ul>
                             </div>
@@ -116,26 +116,26 @@ const Footer = () => {
                                 <h6 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Get Support</h6>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Us</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Help Center</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Help Center</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Community Forums</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Community Forums</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Technical Support</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Technical Support</a>
                                     </li>
                                     <li>
-                                        <a href="#" title className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Live Chat</a>
+                                        <a href="#"  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Live Chat</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="mt-6 w-full md:mt-8 lg:mt-0 lg:max-w-lg">
                             <div className="space-y-5 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-                                <a href="#" title className="text-base font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"> Sign In or Create Account </a>
+                                <a href="#"  className="text-base font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"> Sign In or Create Account </a>
                                 <hr className="border-gray-200 dark:border-gray-600" />
                                 <form action="#">
                                     <div className="items-end space-y-4 sm:flex sm:space-y-0">
@@ -150,7 +150,7 @@ const Footer = () => {
                                 </form>
                                 <hr className="border-gray-200 dark:border-gray-600" />
                                 <div>
-                                    <p className="mb-3 text-sm font-medium text-gray-900 dark:text-white">Trade on the go with <a href="#" title className="underline hover:no-underline">Do or Die</a></p>
+                                    <p className="mb-3 text-sm font-medium text-gray-900 dark:text-white">Trade on the go with <a href="#"  className="underline hover:no-underline">Do or Die</a></p>
                                     <div className="gap-4 space-y-4 sm:flex sm:space-y-0">
                                         <a href="#" className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-800 sm:w-auto">
                                             <svg className="mr-3 h-7 w-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

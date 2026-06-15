@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
     return (
         <section className="px-4 md:px-8 mt-12">
@@ -47,19 +45,19 @@ const Hero = () => {
 
                   <div className="columns-2 space-y-4">
                      <div className="break-inside-avoid">
-                        <img src="https://readymadeui.com/images/face-primer-category.webp" alt="face-primer-category"
+                        <img src="http://localhost:5000/public/images/hero-pro-1.webp" alt="face-primer-category"
                            className="w-full h-full object-cover object-top rounded-lg max-h-90" />
                      </div>
                      <div className="break-inside-avoid">
-                        <img src="https://readymadeui.com/images/product6.webp" alt="product6"
+                        <img src="http://localhost:5000/public/images/hero-pro-2.webp" alt="product6"
                            className="w-full h-full object-cover object-top rounded-lg max-h-90" />
                      </div>
                      <div className="break-inside-avoid">
-                        <img src="https://readymadeui.com/images/product2.webp" alt="product2"
+                        <img src="http://localhost:5000/public/images/hero-pro-3.webp" alt="product2"
                            className="w-full h-full object-cover object-top rounded-lg max-h-90" />
                      </div>
                      <div className="break-inside-avoid">
-                        <img src="https://readymadeui.com/images/skin-glow-category.webp" alt="skin-glow-category"
+                        <img src="http://localhost:5000/public/images/hero-pro-4.webp" alt="skin-glow-category"
                            className="w-full h-full object-cover object-top rounded-lg max-h-90" />
                      </div>
                   </div>

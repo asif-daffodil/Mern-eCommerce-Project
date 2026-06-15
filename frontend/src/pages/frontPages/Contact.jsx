@@ -1,4 +1,3 @@
-import React from "react";
 import Web from "../../assets/icons/web.svg";
 import Map from "../../assets/icons/map.svg";
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const faqs = [
    {
       question: "Are there any special discounts or early bird offers?",

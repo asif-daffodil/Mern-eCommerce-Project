@@ -8,6 +8,12 @@ import Contact from "./pages/frontPages/Contact";
 import Login from "./pages/frontPages/auth/Login";
 import Register from "./pages/frontPages/auth/Register";
 import Checkout from "./pages/frontPages/Checkout";
+import AdminLayout from "./layouts/AdminLayout";
+import Dashboard from "./pages/adminPages/Dashboard";
+import Products from "./pages/adminPages/Products";
+import Orders from "./pages/adminPages/Orders";
+import Customers from "./pages/adminPages/Customers";
+import Settings from "./pages/adminPages/Settings";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +52,32 @@ const router = createBrowserRouter([
         path: "/checkout",
         element: <Checkout />
       }
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "orders",
+        element: <Orders />,
+      },
+      {
+        path: "customers",
+        element: <Customers />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
+      },
     ],
   },
 ]);

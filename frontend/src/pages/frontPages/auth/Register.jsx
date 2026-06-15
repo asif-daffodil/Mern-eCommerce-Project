@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router';
-import Logo from "../../../assets/images/logo.svg";
 
 export default function Register() {
 
@@ -8,7 +6,7 @@ export default function Register() {
       <main className="min-h-screen flex flex-col justify-center p-4 md:p-8">
          <div className="w-full max-w-lg mx-auto sm:max-w-4xl border border-slate-200 dark:border-neutral-700 rounded-md p-6 sm:p-12 bg-white dark:bg-neutral-900">
             <div className="mb-12">
-               <a href="#"><img src={Logo} alt="logo"
+               <a href="#"><img src='http://localhost:5000/public/images/logo.svg' alt="logo"
                   className="w-40 inline-block dark:invert dark:brightness-100" />
                </a>
                <p className="text-slate-600 text-base mt-6 dark:text-slate-400">Create your account and get started</p>

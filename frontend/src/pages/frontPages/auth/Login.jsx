@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Logo from "../../../assets/images/logo.svg";
-import LoginImg from "../../../assets/images/login.png";
+import { useState } from 'react';
 import { Link } from 'react-router';
 
 const Login = () => {
@@ -18,7 +16,7 @@ const Login = () => {
                <div className="max-w-md mx-auto w-full p-2 md:p-4">
                   <div className="inline-block mb-10">
                      <a href="#">
-                        <img src={Logo} alt="logo"
+                        <img src='http://localhost:5000/public/images/logo.svg' alt="logo"
                            className="w-40 block dark:invert dark:brightness-100" />
                      </a>
                   </div>
@@ -137,7 +135,7 @@ const Login = () => {
 
                <div
                   className="aspect-square bg-gray-50 relative before:absolute before:inset-0 before:bg-indigo-600/70 rounded-md overflow-hidden w-full h-full">
-                  <img src={LoginImg} className="w-full h-full object-cover" alt="login img" />
+                  <img src='http://localhost:5000/public/images/login.png' className="w-full h-full object-cover" alt="login img" />
                   <div className="absolute inset-0 m-auto max-w-sm p-6 flex items-center justify-center">
                      <div>
                         <h1 className="text-white text-3xl font-bold">Sign in</h1>
