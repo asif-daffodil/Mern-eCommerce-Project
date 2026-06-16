@@ -8,7 +8,7 @@ const Hero = () => {
                      <p className="mb-2 font-medium text-blue-700 text-sm uppercase dark:text-blue-500"><span
                         className="rotate-90 inline-block mr-2">|</span> Built to Grow with You</p>
                      <h1 className="text-4xl text-slate-900 font-bold leading-tight! mb-6 md:text-5xl dark:text-slate-50">
-                        Empower Brand with doordie Solutions</h1>
+                        Empower Brand with hmmmm Solutions</h1>
                      <p className="text-slate-600 text-lg leading-relaxed dark:text-slate-400">Showcase your products and
                         connect with your audience. Our all-in-one platform helps you manage operations and boost
                         visibility — whether you're in fashion, beauty, wellness, or beyond.</p>
