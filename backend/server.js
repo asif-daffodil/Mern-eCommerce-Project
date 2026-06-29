@@ -40,8 +40,13 @@ const productRoute = require("./routes/product");
 app.use("/product", productRoute);
 
 
-conn().then(() => {
+conn()
+  .then(() => {
     app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
+      console.log(`Server is running on port ${PORT}`);
     });
-});
+  })
+  .catch((err) => {
+    console.error("Failed to start server:", err);
+    process.exit(1);
+  });

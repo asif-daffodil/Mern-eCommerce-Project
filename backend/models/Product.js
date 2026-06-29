@@ -39,8 +39,9 @@ const productSchema = new mongoose.Schema(
     },
 
     brand: {
-      type: String,
-      trim: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Brand",
+      required: false,
     },
 
     stock: {
