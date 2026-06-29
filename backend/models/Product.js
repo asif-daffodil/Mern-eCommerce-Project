@@ -67,6 +67,11 @@ const productSchema = new mongoose.Schema(
       },
     ],
 
+    featuredImage: {
+      url: String,
+      alt: String,
+    },
+
     attributes: {
       color: [String],
       size: [String],
