@@ -105,9 +105,41 @@ const addNewProduct = async (req, res) => {
     }
 };
 
+const addNewBrand = async (req, res) => {
+    try {
+        const { name, slug, description, isActive } = req.body;
+
+        const brandData = {
+            name,
+            slug,
+            description,
+            isActive: isActive === "true" || isActive === true,
+        };
+
+        if (req.file) {
+            brandData.logo = `/public/uploads/${req.file.filename}`;
+        }
+
+        const brand = await Brand.create(brandData);
+
+        res.status(201).json({
+            success: true,
+            brand,
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+}
+
+
+
 module.exports = {
     getAllProducts,
     getAllBrands,
     getAllCategories,
-    addNewProduct
+    addNewProduct,
+    addNewBrand
 };
