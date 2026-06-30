@@ -134,6 +134,35 @@ const addNewBrand = async (req, res) => {
     }
 }
 
+const addNewCategory = async (req, res) => {
+    try {
+        const { name, slug, description, isActive } = req.body;
+
+        const categoryData = {
+            name,
+            slug,
+            description,
+            isActive: isActive === "true" || isActive === true,
+        };
+
+        if (req.file) {
+            categoryData.image = `/public/uploads/${req.file.filename}`;
+        }
+
+        const category = await Category.create(categoryData);
+
+        res.status(201).json({
+            success: true,
+            category,
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+}
+
 
 
 module.exports = {
@@ -141,5 +170,6 @@ module.exports = {
     getAllBrands,
     getAllCategories,
     addNewProduct,
-    addNewBrand
+    addNewBrand,
+    addNewCategory
 };
