@@ -53,7 +53,69 @@ const getUser = async (req, res) => {
     }
 };
 
+const updateProfile = async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+        const user = await User.findById(req.user._id).select("+password");
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "User not found",
+            });
+        }
+
+        if (email && email !== user.email) {
+            const existingUser = await User.findOne({ email });
+
+            if (existingUser) {
+                return res.status(409).json({
+                    success: false,
+                    message: "User already exists with this email",
+                });
+            }
+
+            user.email = email;
+        }
+
+        if (name) {
+            user.name = name;
+        }
+
+        if (password) {
+            user.password = password;
+        }
+
+        if (req.file) {
+            user.image = `/public/uploads/${req.file.filename}`;
+        }
+
+        await user.save();
+
+        res.json({
+            success: true,
+            message: "Profile updated successfully",
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                image: user.image,
+                role: user.role,
+                isActive: user.isActive,
+                createdAt: user.createdAt,
+                updatedAt: user.updatedAt,
+            },
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+};
+
 module.exports = {
     getAllUsers,
     getUser,
+    updateProfile,
 };
