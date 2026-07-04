@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
 const createToken = (userId) => {
@@ -42,7 +43,8 @@ const register = async (req, res) => {
             });
         }
 
-        const userData = { name, email, password };
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const userData = { name, email, password: hashedPassword };
 
         if (req.file) {
             userData.image = `/public/uploads/${req.file.filename}`;

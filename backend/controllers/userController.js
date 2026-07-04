@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const safeUserFields = "name email image role isActive createdAt updatedAt";
 
@@ -83,7 +84,7 @@ const updateProfile = async (req, res) => {
         }
 
         if (password) {
-            user.password = password;
+            user.password = await bcrypt.hash(password, 10);
         }
 
         if (req.file) {
