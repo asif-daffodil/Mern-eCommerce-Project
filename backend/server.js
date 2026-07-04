@@ -39,6 +39,12 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 const productRoute = require("./routes/product");
 app.use("/product", productRoute);
 
+const authRoute = require("./routes/auth");
+app.use("/auth", authRoute);
+
+const userRoute = require("./routes/user");
+app.use("/user", userRoute);
+
 
 conn()
   .then(() => {
