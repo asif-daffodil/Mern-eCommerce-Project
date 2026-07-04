@@ -22,19 +22,6 @@ const sendAuthResponse = (res, statusCode, user) => {
     });
 };
 
-const getUserFromToken = async (req) => {
-    const authHeader = req.headers.authorization;
-
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-        return null;
-    }
-
-    const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || "dev_secret");
-
-    return User.findById(decoded.id).select("name email image role isActive createdAt updatedAt");
-};
-
 const register = async (req, res) => {
     try {
         const { name, email, password } = req.body;
@@ -108,73 +95,7 @@ const login = async (req, res) => {
     }
 };
 
-const checkLogin = async (req, res) => {
-    try {
-        const user = await getUserFromToken(req);
-
-        if (!user || !user.isActive) {
-            return res.status(401).json({
-                success: false,
-                isLoggedIn: false,
-                message: "User is not logged in",
-            });
-        }
-
-        res.json({
-            success: true,
-            isLoggedIn: true,
-            user,
-        });
-    } catch (err) {
-        res.status(401).json({
-            success: false,
-            isLoggedIn: false,
-            message: "Invalid or expired token",
-        });
-    }
-};
-
-const checkAdmin = async (req, res) => {
-    try {
-        const user = await getUserFromToken(req);
-
-        if (!user || !user.isActive) {
-            return res.status(401).json({
-                success: false,
-                isLoggedIn: false,
-                isAdmin: false,
-                message: "User is not logged in",
-            });
-        }
-
-        if (user.role !== "admin") {
-            return res.status(403).json({
-                success: false,
-                isLoggedIn: true,
-                isAdmin: false,
-                message: "Admin access required",
-            });
-        }
-
-        res.json({
-            success: true,
-            isLoggedIn: true,
-            isAdmin: true,
-            user,
-        });
-    } catch (err) {
-        res.status(401).json({
-            success: false,
-            isLoggedIn: false,
-            isAdmin: false,
-            message: "Invalid or expired token",
-        });
-    }
-};
-
 module.exports = {
     register,
     login,
-    checkLogin,
-    checkAdmin,
 };
