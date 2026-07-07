@@ -164,11 +164,27 @@ const addNewCategory = async (req, res) => {
 }
 
 const getProduct = async (req, res) => {
-    const { id } = req.params;
-    const productInfo = await Product.findById(id);
-    res.json({ productInfo });
-}
+    try {
+        const { id } = req.params;
+        const productInfo = await Product.findById(id)
+            .populate("category", "name")
+            .populate("brand", "name");
 
+        if (!productInfo) {
+            return res.status(404).json({
+                success: false,
+                message: "Product not found",
+            });
+        }
+
+        res.json({ productInfo });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+};
 
 
 module.exports = {
