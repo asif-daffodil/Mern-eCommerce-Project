@@ -105,6 +105,103 @@ const addNewProduct = async (req, res) => {
     }
 };
 
+const updateProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const {
+            name,
+            slug,
+            description,
+            price,
+            discountPrice,
+            category,
+            brand,
+            stock,
+            sku,
+            material,
+            color,
+            size,
+            isFeatured,
+            isActive,
+        } = req.body;
+
+        const product = await Product.findById(id);
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: "Product not found",
+            });
+        }
+
+        const updateData = {};
+
+        if (name !== undefined) updateData.name = name;
+        if (slug !== undefined) updateData.slug = slug;
+        if (description !== undefined) updateData.description = description;
+        if (price !== undefined) updateData.price = price;
+        if (discountPrice !== undefined) updateData.discountPrice = discountPrice;
+        if (category !== undefined) updateData.category = category;
+        if (brand !== undefined) updateData.brand = brand;
+        if (stock !== undefined) updateData.stock = stock;
+        if (sku !== undefined) updateData.sku = sku;
+        if (isFeatured !== undefined)
+            updateData.isFeatured =
+                isFeatured === "true" || isFeatured === true;
+        if (isActive !== undefined)
+            updateData.isActive = isActive === "true" || isActive === true;
+
+        const attributes = { ...product.attributes };
+        if (material !== undefined) attributes.material = material;
+        if (color !== undefined)
+            attributes.color = color
+                ? color
+                      .split(",")
+                      .map((item) => item.trim())
+                      .filter(Boolean)
+                : [];
+        if (size !== undefined)
+            attributes.size = size
+                ? size
+                      .split(",")
+                      .map((item) => item.trim())
+                      .filter(Boolean)
+                : [];
+
+        if (
+            material !== undefined ||
+            color !== undefined ||
+            size !== undefined
+        ) {
+            updateData.attributes = attributes;
+        }
+
+        if (req.files && req.files.length > 0) {
+            const uploadedImages = req.files.map((file) => ({
+                url: `/public/uploads/${file.filename}`,
+                alt: name || product.name || "",
+            }));
+
+            updateData.featuredImage = uploadedImages[0];
+            updateData.images = uploadedImages.slice(1);
+        }
+
+        const updatedProduct = await Product.findByIdAndUpdate(id, updateData, {
+            new: true,
+            runValidators: true,
+        });
+
+        res.json({
+            success: true,
+            product: updatedProduct,
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+};
+
 const addNewBrand = async (req, res) => {
     try {
         const { name, slug, description, isActive } = req.body;
@@ -192,6 +289,7 @@ module.exports = {
     getAllBrands,
     getAllCategories,
     addNewProduct,
+    updateProduct,
     addNewBrand,
     addNewCategory,
     getProduct
