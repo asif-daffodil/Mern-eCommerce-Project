@@ -163,6 +163,12 @@ const addNewCategory = async (req, res) => {
     }
 }
 
+const getProduct = async (req, res) => {
+    const { id } = req.params;
+    const productInfo = await Product.findById(id);
+    res.json({ productInfo });
+}
+
 
 
 module.exports = {
@@ -171,5 +177,6 @@ module.exports = {
     getAllCategories,
     addNewProduct,
     addNewBrand,
-    addNewCategory
+    addNewCategory,
+    getProduct
 };
