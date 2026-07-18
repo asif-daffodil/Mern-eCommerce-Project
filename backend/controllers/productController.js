@@ -298,15 +298,43 @@ const deleteProduct = async (req, res) => {
             });
         }
 
-        // Delete previously uploaded images from the server
-        if (product.images) {
+        // Helper to safely extract a URL string from different stored shapes
+        const extractUrl = (maybeImage) => {
+            if (!maybeImage) return null;
+            if (typeof maybeImage === "string") return maybeImage;
+            if (maybeImage && typeof maybeImage.url === "string") return maybeImage.url;
+            return null;
+        };
+
+        const urls = [];
+
+        // featuredImage may be an embedded doc or null
+        const featured = extractUrl(product.featuredImage);
+        if (featured) urls.push(featured);
+
+        if (Array.isArray(product.images) && product.images.length > 0) {
             product.images.forEach((image) => {
-                const imagePath = path.join(__dirname, "..", image.url);
+                const u = extractUrl(image);
+                if (u) urls.push(u);
+            });
+        }
+
+        // Delete files from disk (if they exist)
+        urls.forEach((urlStr) => {
+            // ensure we only operate on string URLs
+            if (typeof urlStr !== "string") return;
+
+            // remove leading slashes so path.join builds a relative path
+            const relPath = urlStr.replace(/^\/+/, "");
+            const imagePath = path.join(__dirname, "..", relPath);
+            try {
                 if (fs.existsSync(imagePath)) {
                     fs.unlinkSync(imagePath);
                 }
-            });
-        }
+            } catch (e) {
+                // ignore file deletion errors, continue
+            }
+        });
 
         // Delete the product from the database
         const deletedProduct = await Product.findByIdAndDelete(id);
