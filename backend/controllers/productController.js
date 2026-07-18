@@ -1,8 +1,7 @@
 const Product = require("../models/Product");
 const Brand = require("../models/Brand");
 const Category = require("../models/Category");
-const path = require("path");
-const fs = require("fs");
+
 
 const getAllProducts = async (req, res) => {
     const allProducts = await Product.find();
@@ -157,16 +156,16 @@ const updateProduct = async (req, res) => {
         if (color !== undefined)
             attributes.color = color
                 ? color
-                      .split(",")
-                      .map((item) => item.trim())
-                      .filter(Boolean)
+                    .split(",")
+                    .map((item) => item.trim())
+                    .filter(Boolean)
                 : [];
         if (size !== undefined)
             attributes.size = size
                 ? size
-                      .split(",")
-                      .map((item) => item.trim())
-                      .filter(Boolean)
+                    .split(",")
+                    .map((item) => item.trim())
+                    .filter(Boolean)
                 : [];
 
         if (
@@ -283,9 +282,11 @@ const getProduct = async (req, res) => {
             message: err.message,
         });
     }
-}; 
+};
 
 const deleteProduct = async (req, res) => {
+    const path = require("path");
+    const fs = require("fs");
     try {
         const { id } = req.params;
         // delete previously uploaded images from the server
