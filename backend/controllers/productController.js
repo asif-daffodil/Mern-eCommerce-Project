@@ -286,6 +286,26 @@ const getProduct = async (req, res) => {
 const deleteProduct = async (req, res) => {
     try {
         const { id } = req.params;
+        // delete previously uploaded images from the server
+        const product = await Product.findById(id);
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: "Product not found",
+            });
+        }
+
+        // Delete previously uploaded images from the server
+        if (product.images) {
+            product.images.forEach((image) => {
+                const imagePath = path.join(__dirname, "..", image);
+                if (fs.existsSync(imagePath)) {
+                    fs.unlinkSync(imagePath);
+                }
+            });
+        }
+
+        // Delete the product from the database
         const deletedProduct = await Product.findByIdAndDelete(id);
 
         if (!deletedProduct) {
