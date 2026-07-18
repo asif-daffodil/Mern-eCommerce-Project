@@ -301,7 +301,7 @@ const deleteProduct = async (req, res) => {
         // Delete previously uploaded images from the server
         if (product.images) {
             product.images.forEach((image) => {
-                const imagePath = path.join(__dirname, "..", image);
+                const imagePath = path.join(__dirname, "..", image.url);
                 if (fs.existsSync(imagePath)) {
                     fs.unlinkSync(imagePath);
                 }

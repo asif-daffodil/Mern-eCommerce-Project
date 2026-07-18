@@ -15,7 +15,7 @@ const { isLoggedIn, isAdmin } = require('../middlewares/auth');
 const router = express.Router();
 
 router.get("/all-products", getAllProducts);
-router.get("/all-btands", getAllBrands);
+router.get("/all-brands", getAllBrands);
 router.get("/all-categories", getAllCategories);
 router.post("/create", isLoggedIn, isAdmin, upload.array("images", 10), addNewProduct);
 router.put("/update/:id", isLoggedIn, isAdmin, upload.array("images", 10), updateProduct);
