@@ -45,6 +45,9 @@ app.use("/auth", authRoute);
 const userRoute = require("./routes/user");
 app.use("/user", userRoute);
 
+const orderRoute = require("./routes/order");
+app.use("/order", orderRoute);
+
 
 conn()
   .then(() => {
